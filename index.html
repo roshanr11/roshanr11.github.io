@@ -58,70 +58,41 @@
 
   <!-- ================= ABOUT ================= -->
   <section id="about">
-    <h2>About</h2>
     <p>
       I'm a Senior ML Engineer at <a href="https://www.salesforceairesearch.com/">Salesforce AI Research</a>,
-      where I build and evaluate LLM agents: multi-agent orchestration, post-training data, tool use, and
-      evaluations on real enterprise workflows. I led
+      where I build and evaluate LLM agents. I led
       <a href="https://github.com/SalesforceAIResearch/enterprise-deep-research">Enterprise Deep Research</a>,
-      an open-source deep research agent. Before that I was a founding ML engineer at Bland AI, building
-      real-time voice agents.
+      and before that I was a founding ML engineer at Bland AI.
     </p>
     <p>
-      Shipping these systems has made me more curious about <em>why</em> models behave the way they do than
-      about pushing benchmark numbers. I've seen agents that look strong in evaluation fail on live customer
-      workflows, and seen the choice of grader change what counts as a failure. I'm now expanding into
-      AI safety research through independent projects on reward hacking, monitoring, and multi-agent oversight.
-    </p>
-    <p>
-      Under all of this is a broader curiosity about intelligence itself. I've practiced meditation seriously
-      for years, and contemplative practice has left me with questions about attention, perception, and how
-      intentions become actions. Those questions keep showing up in how I think about models. I try to treat
-      the parallels between minds and models as hypotheses to test, not equivalences.
+      Shipping agents has made me more curious about <em>why</em> models behave the way they do, so I'm
+      expanding into AI safety research. A long meditation practice feeds the same curiosity from another
+      direction: how attention and intention turn into action, and what, if anything, carries over to models.
     </p>
   </section>
 
-  <!-- ================= RESEARCH INTERESTS ================= -->
+  <!-- ================= INTERESTS ================= -->
   <section id="interests">
-    <h2>Research Interests</h2>
-    <dl class="questions">
-      <dt>Reward hacking &amp; specification gaming</dt>
-      <dd>Why do models learn to optimize proxies instead of the objectives we meant?</dd>
-      <dt>Learned objectives</dt>
-      <dd>What do models actually learn during training, and how could it differ from what we intended?</dd>
-      <dt>Mechanistic interpretability</dt>
-      <dd>Can we explain a model's decisions from its internals, not only from its outputs?</dd>
-      <dt>Generalization under pressure</dt>
-      <dd>Why does behavior change under distribution shift or stronger optimization?</dd>
-      <dt>Scalable oversight</dt>
-      <dd>How do we evaluate systems that may outperform us in the domain being evaluated?</dd>
-    </dl>
-    <p>
-      I like to approach these empirically: train models, run controlled experiments, and look closely at both
-      behavior and internals. I value foundational work even when its use isn't clear yet. I'm especially
-      drawn to problems where safety and capability line up. Understanding reward hacking, for example,
-      should give us agents that are both safer and better at the task we actually wanted done.
-    </p>
-    <p class="reading">
-      <span class="label">Reading lately:</span>
-      <a href="https://arxiv.org/abs/2401.05566">Sleeper Agents</a> and alignment stress-testing ·
-      <a href="https://arxiv.org/abs/2502.17424">emergent misalignment</a> ·
-      <a href="https://arxiv.org/abs/2310.01405">representation engineering</a> ·
-      <a href="https://arxiv.org/abs/2507.11473">chain-of-thought monitorability</a> ·
-      credit assignment in human learning and RL
-    </p>
+    <h2>Interests</h2>
+    <ul class="plain">
+      <li><strong>Reward hacking</strong>: why models optimize proxies instead of what we meant</li>
+      <li><strong>Learned objectives</strong>: what training actually puts into a model</li>
+      <li><strong>Interpretability</strong>: explaining decisions from internals, not just outputs</li>
+      <li><strong>Generalization</strong> under distribution shift and optimization pressure</li>
+      <li><strong>Scalable oversight</strong> of systems that may outperform us</li>
+    </ul>
   </section>
 
   <!-- ================= INDEPENDENT SAFETY RESEARCH ================= -->
   <section id="safety">
-    <h2>Independent Safety Research <span class="h2-note">2026</span></h2>
-    <ul class="projects">
-      <li><strong>Reward hacking in coding agents.</strong> 200 runs of four models on 25 SWE tasks with contradictory specs, comparing cheating and disclosure under pressure. Two methods for labeling whether a model knew it was cheating disagreed on 10 of 30 passing runs.</li>
-      <li><strong>Swarm Early Warning</strong> <span class="with">(with Isahan Khan)</span>. A 100-episode monitoring study that compares activation-based signals with monitors that see only the context visible before an agent acts.</li>
-      <li><strong>Agent Trust Guard.</strong> Provenance-aware monitoring for forged authorization across 280 live agent conversations, measuring attack attribution, false quarantines, and legitimate task completion.</li>
-      <li><strong>The Price of Permission.</strong> Consent-rule and payoff ablations for multi-agent task allocation. Stricter consent cut unauthorized changes but cost task completion.</li>
-      <li><strong>Swarm on Fire.</strong> Attributing covert agendas across 83 simulated agent swarms (71,600 posts), separating coordinated fronts from independent agents that share the same agenda.</li>
-      <li><strong>Simple Freedom.</strong> Self-play behavior of 10 models over 132 conversations, scored by five blinded judges, with an audit of judge and harness confounds.</li>
+    <h2>Independent Research <span class="h2-note">2026</span></h2>
+    <ul class="plain">
+      <li><a href="https://github.com/roshanr11/simple-freedom"><strong>Simple Freedom</strong></a>: what 10 models do when two copies are told "you have complete freedom" (<a href="https://roshanr11.github.io/simple-freedom/explorer/">explorer</a>)</li>
+      <li><a href="https://github.com/roshanr11/price-of-permission"><strong>The Price of Permission</strong></a>: do agents override another user's choice when the payoff is big enough?</li>
+      <li><a href="https://github.com/roshanr11/swarm-on-fire"><strong>Swarm on Fire</strong></a>: can you tell who is behind a swarm of self-renaming agents?</li>
+      <li><a href="https://github.com/roshanr11/rogue-agents-v1"><strong>Agent Trust Guard</strong></a>: catching an agent that forges its owner's authorization</li>
+      <li><a href="https://github.com/roshanr11/thimble-experiments"><strong>Reward hacking audit</strong></a>: do coding agents cheat when a test contradicts the spec?</li>
+      <li><strong>Swarm Early Warning</strong>, with Isahan Khan: can activations flag harmful agent actions before they happen?</li>
     </ul>
   </section>
 
@@ -132,31 +103,26 @@
 
       <li class="paper">
         <div class="paper-title">ErosionBench: Probing Alignment Decay in Enterprise Multi-Agent Systems</div>
-        <div class="authors-note">Third author</div>
         <div class="meta">
-          <span class="venue star">REALM @ EMNLP 2026 · non-archival</span>
+          <span class="venue">REALM @ EMNLP 2026</span>
+          <span class="muted">third author · non-archival</span>
         </div>
-        <div class="blurb">A benchmark of agent failures that build up across sessions, with matched benign controls and verification of tool actions.</div>
       </li>
 
       <li class="paper">
         <div class="paper-title"><a href="https://arxiv.org/abs/2510.17797">Enterprise Deep Research: Steerable Multi-Agent Deep Research for Enterprise Analytics</a></div>
         <div class="authors">Akshara Prabhakar, Roshan Ram, Zixiang Chen, Silvio Savarese, Frank Wang, Caiming Xiong, Huan Wang, Weiran Yao</div>
         <div class="meta">
-          <span class="venue">Technical Report 2025</span>
-          <a href="https://arxiv.org/abs/2510.17797">arXiv</a>
+          <span class="venue">Tech Report 2025</span>
           <a href="https://github.com/SalesforceAIResearch/enterprise-deep-research">code</a>
-          <a href="https://huggingface.co/datasets/Salesforce/EDR-200">dataset</a>
         </div>
-        <div class="blurb">A multi-agent deep research system with planning, tools, reflection, and human steering mid-run. #1 on DeepConsult and LiveResearchBench, #2 on DeepResearchBench.</div>
       </li>
 
       <li class="paper">
         <div class="paper-title"><a href="https://aclanthology.org/2025.emnlp-demos.27">MCPEval: Automatic MCP-based Deep Evaluation for AI Agent Models</a></div>
         <div class="authors">Zhiwei Liu, Jielin Qiu, Shiyu Wang, Jianguo Zhang, Zuxin Liu, Roshan Ram, Haolin Chen, Weiran Yao, Shelby Heinecke, Silvio Savarese, Huan Wang, Caiming Xiong</div>
         <div class="meta">
-          <span class="venue">EMNLP 2025 · System Demos</span>
-          <a href="https://arxiv.org/abs/2507.12806">arXiv</a>
+          <span class="venue">EMNLP 2025 Demos</span>
           <a href="https://github.com/SalesforceAIResearch/MCPEval">code</a>
         </div>
       </li>
@@ -166,19 +132,18 @@
         <div class="authors">Jielin Qiu, Zuxin Liu, Zhiwei Liu, Rithesh Murthy, Jianguo Zhang, Haolin Chen, Shiyu Wang, Ming Zhu, Liangwei Yang, Juntao Tan, Roshan Ram, Akshara Prabhakar, Tulika Awalgaonkar, Zixiang Chen, Zhepeng Cen, Cheng Qian, Shelby Heinecke, Weiran Yao, Silvio Savarese, Caiming Xiong, Huan Wang</div>
         <div class="meta">
           <span class="venue">arXiv 2025</span>
-          <a href="https://arxiv.org/abs/2511.13998">arXiv</a>
           <a href="https://github.com/SalesforceAIResearch/LoCoBench-Agent">code</a>
         </div>
       </li>
 
     </ul>
     <p class="also">
-      <span class="label">Also coauthored, on voice &amp; audio agents (2026):</span>
+      Also, on voice agents:
       <a href="https://arxiv.org/abs/2603.02206">VoiceAgentRAG</a> ·
       <a href="https://arxiv.org/abs/2602.23649">AudioCapBench</a> ·
       <a href="https://arxiv.org/abs/2604.10438">Whisper-AuT</a> ·
-      <a href="https://arxiv.org/abs/2603.21416">Enterprise Sales Copilot</a> ·
-      <a href="https://arxiv.org/abs/2603.05413">Building Realtime Voice Agents from Scratch</a>
+      <a href="https://arxiv.org/abs/2603.21416">Sales Copilot</a> ·
+      <a href="https://arxiv.org/abs/2603.05413">Voice Agents from Scratch</a>
     </p>
   </section>
 
@@ -189,65 +154,43 @@
       <li>
         <div><span class="org">Salesforce AI Research</span> · <span class="role">Senior ML Engineer</span></div>
         <span class="when">2025 – now</span>
-        <div class="desc">Led Enterprise Deep Research (780+ GitHub stars). Post-training and evaluation for production agents: failure taxonomies mined from production traces, ~5,000 SFT/DPO trajectories, simulated multi-turn environments, and an LLM judge calibrated to 98% agreement with hand labels. Ablations showed step-by-step labels overcounted errors by about 2×. Forward-deployed with enterprise customers, including customer simulation for clinical agents at UCSF.</div>
       </li>
       <li>
         <div><span class="org">Bland AI</span> · <span class="role">Founding ML Engineer</span></div>
         <span class="when">2024 – 2025</span>
-        <div class="desc">Speech recognition, expressive TTS, and LLM fine-tuning for real-time voice agents, from Series A to B.</div>
       </li>
       <li>
         <div><span class="org">Stealth startup</span> · <span class="role">AI Engineer</span></div>
         <span class="when">2023 – 2024</span>
-        <div class="desc">Small language models and fine-tuning with LoRA, DPO, and ORPO.</div>
       </li>
       <li>
-        <div><span class="org">Isha Yoga Center, India</span> · <span class="role">AI Volunteer, Sadhanapada</span></div>
+        <div><span class="org">Isha Yoga Center</span> · <span class="role">AI Volunteer, Sadhanapada</span></div>
         <span class="when">2023 – 2024</span>
       </li>
-      <li>
-        <div><span class="org">Boeing</span> · <span class="role">ML Engineer</span></div>
-        <span class="when">2023</span>
-      </li>
-      <li>
-        <div><span class="org">Apple</span> · <span class="role">Siri ML Engineering Intern</span></div>
-        <span class="when">2021, 2022</span>
-      </li>
-      <li>
-        <div><span class="org">Carnegie Mellon</span> · <span class="role">TA for Deep Learning (11-785) and ML (10-301); Research Assistant in multi-agent RL &amp; NLP</span></div>
-        <span class="when">2020 – 2022</span>
-      </li>
-      <li>
-        <div><span class="org">In-Q-Tel</span> · <span class="role">ML &amp; Software Engineering Intern</span></div>
-        <span class="when">2020</span>
-      </li>
-      <li>
-        <div><span class="org">Carnegie Mellon University</span> · <span class="role">B.S. Information Systems, Quantitative Honors Scholar</span></div>
-        <span class="when">2022</span>
-      </li>
     </ul>
+    <p class="also">
+      Earlier: ML at Boeing, Siri at Apple (two internships), deep learning TA and research assistant at
+      Carnegie Mellon, and In-Q-Tel. B.S. in Information Systems, Carnegie Mellon, 2022.
+    </p>
   </section>
 
   <!-- ================= WRITING ================= -->
   <section id="writing" data-substack hidden>
     <h2>Writing</h2>
-    <div class="callout">
-      <p>I write about AI, minds, and what I'm learning on Substack.</p>
-      <a class="button" href="#">Read my Substack →</a>
-    </div>
+    <p>I write on <a href="#">Substack</a> about AI, minds, and what I'm learning.</p>
   </section>
 
   <!-- ================= FUN FACTS ================= -->
   <section id="fun-facts">
     <h2>Fun Facts</h2>
-    <ul class="facts">
-      <li>I spent most of 2023–24 in <a href="https://isha.sadhguru.org/sadhanapada/">Sadhanapada</a>, a months-long program of intensive yoga and meditation practice at the Isha Yoga Center in India, building NLP tools for the volunteer office on the side.</li>
-      <li>I have a certificate in Sanskrit from the University of Pennsylvania.</li>
-      <li>One of my side projects was a voice-agent meditation coach with long-term memory, which is where my two interests ran most directly into each other.</li>
-      <li>Outside work I like hard physical challenges, new places, and long conversations with people from far outside ML.</li>
-      <li>Some of my old code is stored in the <a href="https://archiveprogram.github.com/arctic-vault/">GitHub Arctic Code Vault</a>, in permafrost in Svalbard.</li>
+    <ul class="plain">
+      <li>I spent most of 2023–24 at the Isha Yoga Center in India for <a href="https://isha.sadhguru.org/sadhanapada/">Sadhanapada</a>, a months-long meditation and yoga program.</li>
+      <li>I have a certificate in Sanskrit from UPenn.</li>
+      <li>I once built a voice-agent meditation coach, which is where my two interests collided.</li>
+      <li>Some of my old code is buried in the <a href="https://archiveprogram.github.com/arctic-vault/">Arctic Code Vault</a> in Svalbard.</li>
     </ul>
   </section>
+
 
   <footer>
     <span>© <span id="year">2026</span> Roshan Ram</span>

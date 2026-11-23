@@ -107,7 +107,8 @@ h1 {
 .links a { display: inline-flex; align-items: center; gap: 6px; }
 
 /* ---------- sections ---------- */
-section { margin-top: 44px; }
+section { margin-top: 48px; }
+#about { margin-top: 32px; }
 
 h2 {
   font-family: var(--sans);
@@ -280,3 +281,10 @@ footer {
   .timeline li { grid-template-columns: 1fr; }
   .timeline .when { padding-top: 0; }
 }
+
+/* ---------- light lists ---------- */
+.plain { margin: 0; padding: 0; list-style: none; }
+.plain li { margin-bottom: 8px; }
+.plain strong { font-weight: 600; }
+.muted { color: var(--muted); }
+.paper { margin-bottom: 18px; }
